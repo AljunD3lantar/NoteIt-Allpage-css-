@@ -1,3 +1,21 @@
+<?php
+require_once 'User.php';
+
+$message = '';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $user = new User();
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    // You may want to add email to your database and User class if needed
+    if ($user->register($username, $password)) {
+        $message = "<p class='success-msg'>Registration successful!</p>";
+    } else {
+        $message = "<p class='error-msg'>Registration failed!</p>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,13 +28,12 @@
     <title>Registration Form</title>
 </head>
 <body>
-
      <nav>            
         <label class="logo">Note<span>It!</span></label>
         <ul>
-            <li><a href="Homepage.html">HOME</a></li>
-            <li><a href="Register.html">REGISTER</a></li>
-            <li><a href="index.html">SIGN IN</a></li>
+            <li><a href="index.php">HOME</a></li>
+            <li><a href="Register.php">REGISTER</a></li>
+            <li><a href="Login.php">SIGN IN</a></li>
         </ul>
     </nav>
 
@@ -25,33 +42,28 @@
             <div class="left">
                 <img src="images/kids.png" alt="logo">
             </div>
-
             <div class="right">
                 <div class="greeting">Hello, friend!</div>
-                <form action="#" class="form">
+                <?php echo $message; ?>
+                <form method="post" class="form">
                     <div class="input-box">
-                        <input type="text" placeholder="Name" required>
+                        <input type="text" name="username" placeholder="Name" required>
                     </div>
-                    
                     <div class="input-box">
-                        <input type="email" placeholder="E-mail" required>
+                        <input type="email" name="email" placeholder="E-mail" required>
                     </div>
-                    
                     <div class="input-box">
-                        <input type="password" placeholder="Password" required>
+                        <input type="password" name="password" placeholder="Password" required>
                     </div>
-                    
                     <div class="terms-container">
                         <input type="checkbox" id="terms" required>
-                        <label for="terms">Live read and agree to Terms & Conditions</label>
+                        <label for="terms">I've read and agree to Terms & Conditions</label>
                     </div>
-
                     <div class="button">
                         <button type="submit" class="primary">CREATE ACCOUNT</button>
                     </div>
-                    
                     <div class="signin-link">
-                        Already have an account? <a href="Dashboard.html">Sign in</a>
+                        Already have an account? <a href="Login.php">Sign in</a>
                     </div>
                 </form>
             </div>

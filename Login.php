@@ -1,3 +1,20 @@
+<?php
+require_once 'User.php';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    session_start();
+    $user = new User();
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    if ($user->login($username, $password)) {
+        $_SESSION['username'] = $username;
+        header("Location: Dashboard.php");
+        exit();
+    } else {
+        echo "<p>Login failed!</p>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,20 +31,20 @@
         <nav>
             <label class="logo">Note<span>It!</span></label>
             <ul>
-                <li><a href="Homepage.html">HOME</a></li>
-                <li><a href="Register.html">REGISTER</a></li>
-                <li><a href="index.html">SIGN IN</a></li>
+                <li><a href="index.php">HOME</a></li>
+                <li><a href="Register.php">REGISTER</a></li>
+                <li><a href="Login.php">SIGN IN</a></li>
             </ul>
         </nav>
 
         <div class="form-container">
-            <form id="login-form">
+            <form id="login-form" method="POST" action="Login.php">
                 <h1>Note<span>It!</span></h1>
                 <div class="input-box">
-                    <input type="text" placeholder="Username">
+                    <input type="text" name="username" placeholder="Username" required>
                 </div>
                 <div class="input-box">
-                    <input type="password" placeholder="Password">
+                    <input type="password" name="password" placeholder="Password" required>
                 </div>
                 <div class="remember-forgot">
                     <label><input type="checkbox">Remember Me</label>
@@ -37,11 +54,5 @@
             </form>
         </div>
     </div>
-    <script>
-    document.getElementById('login-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        window.location.href = 'Dashboard.html';
-    });
-    </script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +16,8 @@
             <label class="logo">Note<span>It!</span></label>
             <ul>
                 <li><a href="Homepage.html">HOME</a></li>
-                <li><a href="Register.html">REGISTER</a></li>
-                <li><a href="index.html">SIGN IN</a></li>
+                <li><a href="Register.php">REGISTER</a></li>
+                <li><a href="Login.php">SIGN IN</a></li>
             </ul>
         </nav>
 
@@ -34,7 +35,7 @@
                   make NoteIt! an indispensable tool for maximizing your efficiency.
                 </p>
                 <div class="button">
-                    <a href="Login.html"><button class="primary button"> Sign In</button></a>
+                    <a href="Login.php"><button class="primary button"> Sign In</button></a>
                 </div>
             </div>
         </div>

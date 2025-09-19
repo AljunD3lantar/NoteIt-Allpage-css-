@@ -55,7 +55,7 @@
 }
 #modal-note-title {
     font-size: 1.1rem;
-    padding: 10px 12px;
+    margin-left: -20px;
     border: 1.5px solid #b2ffb2;
     border-radius: 6px;
     margin-bottom: 16px;
@@ -69,7 +69,7 @@
 }
 #modal-note-content {
     font-size: 1rem;
-    padding: 10px 12px;
+    margin-left: -20px;
     border: 1.5px solid #b2ffb2;
     border-radius: 6px;
     min-height: 120px;
@@ -124,6 +124,7 @@
         padding: 18px 4vw 12px 4vw;
     }
 }
+
 *{
     margin: 0;
     padding: 0;
@@ -464,9 +465,10 @@ form h1 span {
 }
 
 .button .primary:hover {
-    background-color: green;
-    color: white;
-}
+        min-width: 320px;
+        max-width: 900px;
+        width: 100%;
+        box-sizing: border-box;
 
 /* MAIN CONTENT FOR ADMIN DASHBOARD */
 .admin-wrapper {
@@ -496,14 +498,16 @@ form h1 span {
     color: #fff;
 }
 
-ul {
-    padding: 0;
-    list-style: none;
-}
-
-ul li {
-    padding: 15px 20px; 
-    display: flex;
+        font-size: 1.1rem;
+        padding: 10px 12px;
+        border: 1.5px solid #b2ffb2;
+        border-radius: 6px;
+        margin-bottom: 16px;
+        color: #222;
+        background: #f6fff7;
+        transition: border 0.2s;
+        width: 100%;
+        box-sizing: border-box;
     align-items: center; 
 }
 
@@ -534,16 +538,18 @@ ul li a span {
 
 .username{
     display: flex;
-    align-items: center;
-    margin-top: auto;
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-.username img{
-    margin-right: 10px;
-    height: 55px;
-    width: 55px;
+        font-size: 1rem;
+        padding: 10px 12px;
+        border: 1.5px solid #b2ffb2;
+        border-radius: 6px;
+        min-height: 120px;
+        color: #222;
+        background: #f6fff7;
+        margin-bottom: 20px;
+        resize: vertical;
+        transition: border 0.2s;
+        width: 100%;
+        box-sizing: border-box;
     background-color: #bbb;
     border-radius: 50%;
     display: flex;
