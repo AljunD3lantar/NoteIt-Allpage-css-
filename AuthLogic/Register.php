@@ -1,5 +1,5 @@
 <?php
-require_once 'User.php';
+require_once '../Backend/User.php';
 
 $message = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -24,23 +24,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Allpage.css">
+    <link rel="stylesheet" href="../Frontend/Allpage.css">
     <title>Registration Form</title>
 </head>
 <body>
      <nav>            
         <label class="logo">Note<span>It!</span></label>
         <ul>
-            <li><a href="index.php">HOME</a></li>
-            <li><a href="Register.php">REGISTER</a></li>
-            <li><a href="Login.php">SIGN IN</a></li>
+            <li><a href="../Route/index.php">HOME</a></li>
+            <li><a href="../AuthLogic/Register.php">REGISTER</a></li>
+            <li><a href="../AuthLogic/Login.php">SIGN IN</a></li>
         </ul>
     </nav>
 
     <div class="wrapper">
         <div class="register-content">
             <div class="left">
-                <img src="images/kids.png" alt="logo">
+                <img src="../Frontend/images/kids.png" alt="logo">
             </div>
             <div class="right">
                 <div class="greeting">Hello, friend!</div>
@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <button type="submit" class="primary">CREATE ACCOUNT</button>
                     </div>
                     <div class="signin-link">
-                        Already have an account? <a href="Login.php">Sign in</a>
+                        Already have an account? <a href="../AuthLogic/Login.php">Sign in</a>
                     </div>
                 </form>
             </div>

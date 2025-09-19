@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Allpage.css">
+    <link rel="stylesheet" href="../Frontend/Allpage.css">
     <title>Homepage</title>
 </head>
 <body>
@@ -15,15 +15,15 @@
         <nav>
             <label class="logo">Note<span>It!</span></label>
             <ul>
-                <li><a href="Homepage.html">HOME</a></li>
-                <li><a href="Register.php">REGISTER</a></li>
-                <li><a href="Login.php">SIGN IN</a></li>
+                <li><a href="index.php">HOME</a></li>
+                <li><a href="../AuthLogic/Register.php">REGISTER</a></li>
+                <li><a href="../AuthLogic/Login.php">SIGN IN</a></li>
             </ul>
         </nav>
 
         <div class="homepage-content">
             <div class="left">
-                <img src="images/kids.png" alt="logo">
+                <img src="../Frontend/images/kids.png" alt="logo">
             </div>
             <div class="right">
                 <h2>Note<span>It!</span></h2>
@@ -35,7 +35,7 @@
                   make NoteIt! an indispensable tool for maximizing your efficiency.
                 </p>
                 <div class="button">
-                    <a href="Login.php"><button class="primary button"> Sign In</button></a>
+                    <a href="../AuthLogic/Login.php"><button class="primary button"> Sign In</button></a>
                 </div>
             </div>
         </div>

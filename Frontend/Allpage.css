@@ -1,4 +1,4 @@
-/* Note Modal Styles for Dashboard */
+/* Note Modal Styles for Dashboard (use ../Frontend/Allpage.css and ../Frontend/images/...) */
 #note-modal-overlay {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -470,7 +470,9 @@ form h1 span {
         width: 100%;
         box-sizing: border-box;
 
+}
 /* MAIN CONTENT FOR ADMIN DASHBOARD */
+
 .admin-wrapper {
     display: flex;
     min-height: 100vh;
@@ -498,17 +500,20 @@ form h1 span {
     color: #fff;
 }
 
-        font-size: 1.1rem;
-        padding: 10px 12px;
-        border: 1.5px solid #b2ffb2;
-        border-radius: 6px;
-        margin-bottom: 16px;
-        color: #222;
-        background: #f6fff7;
-        transition: border 0.2s;
-        width: 100%;
-        box-sizing: border-box;
-    align-items: center; 
+/* Sidebar form elements styling */
+.sidebar input,
+.sidebar select,
+.sidebar textarea {
+    font-size: 1.1rem;
+    padding: 15px 20px;
+    border: 1.5px solid #b2ffb2;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    color: #222;
+    background: #f6fff7;
+    transition: border 0.2s;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 ul li a {
@@ -538,22 +543,29 @@ ul li a span {
 
 .username{
     display: flex;
-        font-size: 1rem;
-        padding: 10px 12px;
-        border: 1.5px solid #b2ffb2;
-        border-radius: 6px;
-        min-height: 120px;
-        color: #222;
-        background: #f6fff7;
-        margin-bottom: 20px;
-        resize: vertical;
-        transition: border 0.2s;
-        width: 100%;
-        box-sizing: border-box;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: flex;
+    font-size: 1rem;
+    margin-top: auto;
+    padding: 10px 12px;
+    border-radius: 6px;
+    min-height: 120px;
+    color: #222;
+    background: #f6fff7;
+    margin-bottom: 20px;
+    resize: vertical;
+    transition: border 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #2fd48f;
+}
+
+.username img {
+    width: 55px;
+    height: 55px;
     object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #bbb;
+    display: block;
 }
 
 .username p {

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'Database.php';
+require_once '../Backend/Database.php';
 
 $db = new Database();
 $conn = $db->getConnection();
@@ -44,7 +44,7 @@ $notes = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Allpage.css">
+    <link rel="stylesheet" href="../Frontend/Allpage.css">
     <title>User Dashboard</title>
 </head>
 <body>
@@ -54,13 +54,13 @@ $notes = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <p>Note<span>It!</span></p>
             </div>
                 <ul>
-                    <li><a href="#"><img src="images/notes.png" alt="notes">All Notes</a></li>
-                    <li><a href="#"><img src="images/favorites.png" alt="favorites">Favorites</a></li>
-                    <li><a href="#"><img src="images/archive.png" alt="archive">Archive</a></li>
-                    <li><a href="logout.php"><img src="images/logout.png" alt="logout">Logout</a></li>
+                    <li><a href="#"><img src="../Frontend/images/notes.png" alt="notes">All Notes</a></li>
+                    <li><a href="#"><img src="../Frontend/images/favorites.png" alt="favorites">Favorites</a></li>
+                    <li><a href="#"><img src="../Frontend/images/archive.png" alt="archive">Archive</a></li>
+                    <li><a href="../AuthLogic/logout.php"><img src="../Frontend/images/logout.png" alt="logout">Logout</a></li>
                 </ul>
                     <div class="username">
-                     <img src="images/Aljun.jpg" alt="profile"><p>Hi <?php echo isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Guest'; ?><br>Welcome Back.</p>
+                     <img src="../Frontend/images/Aljun.jpg" alt="profile"><p>Hi <?php echo isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Guest'; ?><br>Welcome Back.</p>
                 </div>
         </div>
 
